@@ -58,5 +58,11 @@ kotlin {
                 api("com.google.firebase:firebase-auth:19.3.2")
             }
         }
+
+        val jsTest by getting {
+            dependencies {
+                implementation(kotlin("test-js"))
+            }
+        }
     }
 }

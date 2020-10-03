@@ -230,7 +230,7 @@ subprojects {
 
                 val commonTest by getting {
                     dependencies {
-                        implementation(kotlin("test"))
+                        implementation(kotlin("test-common"))
                         implementation(kotlin("test-annotations-common"))
                     }
                 }
@@ -244,6 +244,7 @@ subprojects {
     }
 
     apply(plugin="maven-publish")
+/*
     apply(plugin="signing")
 
     configure<SigningExtension> {
@@ -253,7 +254,7 @@ subprojects {
         val publishing = extensions.getByType(PublishingExtension::class)
         sign(publishing.publications)
     }
-
+*/
     configure<PublishingExtension> {
 
         repositories {

@@ -25,7 +25,7 @@ kotlin {
         nodejs()
         browser {
             testTask {
-                enabled = true
+                enabled = false
                 useKarma()
             }
         }
@@ -75,9 +75,15 @@ kotlin {
 
         val androidTest by getting {
             dependencies {
-                implementation(kotlin("test"))
+                implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))
                 implementation("androidx.test:core:1.3.0")
+            }
+        }
+
+        val jsTest by getting {
+            dependencies {
+                implementation(kotlin("test-js"))
             }
         }
     }
